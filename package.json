@@ -40,6 +40,9 @@
     "url": "https://github.com/stdlib-js/stdlib/issues"
   },
   "dependencies": {
+    "@stdlib/napi-argv": "^0.1.1",
+    "@stdlib/napi-argv-double": "^0.1.1",
+    "@stdlib/napi-export": "^0.1.1",
     "@stdlib/utils-library-manifest": "^0.1.1"
   },
   "devDependencies": {
