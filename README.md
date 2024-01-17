@@ -35,19 +35,30 @@ limitations under the License.
 
 > Test if two double-precision floating-point numbers are the same value.
 
+<section class="installation">
 
+## Installation
+
+```bash
+npm install @stdlib/number-float64-base-assert-is-same-value
+```
+
+Alternatively,
+
+-   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm` branch][esm-url].
+-   If you are using Deno, visit the [`deno` branch][deno-url].
+-   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd` branch][umd-url].
+
+The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
+
+</section>
 
 <section class="usage">
 
 ## Usage
 
 ```javascript
-import isSameValue from 'https://cdn.jsdelivr.net/gh/stdlib-js/number-float64-base-assert-is-same-value@deno/mod.js';
-```
-The previous example will load the latest bundled code from the deno branch. Alternatively, you may load a specific version by loading the file from one of the [tagged bundles](https://github.com/stdlib-js/number-float64-base-assert-is-same-value/tags). For example,
-
-```javascript
-import isSameValue from 'https://cdn.jsdelivr.net/gh/stdlib-js/number-float64-base-assert-is-same-value@v0.1.0-deno/mod.js';
+var isSameValue = require( '@stdlib/number-float64-base-assert-is-same-value' );
 ```
 
 #### isSameValue( a, b )
@@ -104,7 +115,7 @@ bool = isSameValue( NaN, NaN );
 <!-- eslint no-undef: "error" -->
 
 ```javascript
-import isSameValue from 'https://cdn.jsdelivr.net/gh/stdlib-js/number-float64-base-assert-is-same-value@deno/mod.js';
+var isSameValue = require( '@stdlib/number-float64-base-assert-is-same-value' );
 
 var bool = isSameValue( 3.14, 3.14 );
 // returns true
@@ -125,7 +136,106 @@ bool = isSameValue( NaN, NaN );
 
 <!-- C interface documentation. -->
 
+* * *
 
+<section class="c">
+
+## C APIs
+
+<!-- Section to include introductory text. Make sure to keep an empty line after the intro `section` element and another before the `/section` close. -->
+
+<section class="intro">
+
+</section>
+
+<!-- /.intro -->
+
+<!-- C usage documentation. -->
+
+<section class="usage">
+
+### Usage
+
+```c
+#include "stdlib/number/float64/base/assert/is_same_value.h"
+```
+
+#### stdlib_base_float64_is_same_value( a, b )
+
+Tests if two double-precision floating-point numbers `a` and `b` are the same value.
+
+```c
+#include <stdbool.h>
+
+bool v = stdlib_base_float64_is_same_value( 3.14, 3.14 );
+// returns true
+
+v = stdlib_base_float64_is_same_value( 0.0, -0.0 );
+// returns false
+```
+
+The function accepts the following arguments:
+
+-   **a**: `[in] double` first input value.
+-   **b**: `[in] double` second input value.
+
+```c
+bool stdlib_base_float64_is_same_value( const double a, const double b );
+```
+
+</section>
+
+<!-- /.usage -->
+
+<!-- C API usage notes. Make sure to keep an empty line after the `section` element and another before the `/section` close. -->
+
+<section class="notes">
+
+</section>
+
+<!-- /.notes -->
+
+<!-- C API usage examples. -->
+
+<section class="examples">
+
+### Examples
+
+```c
+#include "stdlib/number/float64/base/assert/is_same_value.h"
+#include <stdbool.h>
+#include <stdio.h>
+
+int main( void ) {
+    const double a[] = {
+        5.0,
+        -2.0,
+        0.0,
+        0.0/0.0
+    };
+    const double b[] = {
+        5.0,
+        2.0,
+        -0.0,
+        0.0/0.0
+    };
+
+    bool v;
+    int i;
+    for ( i = 0; i < 4; i++ ) {
+        v = stdlib_base_float64_is_same_value( a[ i ], b[ i ] );
+        printf( "Same value? %s\n", ( v ) ? "True" : "False" );
+    }
+}
+```
+
+</section>
+
+<!-- /.examples -->
+
+</section>
+
+<!-- /.c -->
 
 <!-- Section for related `stdlib` packages. Do not manually edit this section, as it is automatically populated. -->
 
@@ -144,7 +254,7 @@ bool = isSameValue( NaN, NaN );
 
 ## Notice
 
-This package is part of [stdlib][stdlib], a standard library with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
+This package is part of [stdlib][stdlib], a standard library for JavaScript and Node.js, with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
 
 For more information on the project, filing bug reports and feature requests, and guidance on how to develop [stdlib][stdlib], see the main project [repository][stdlib].
 
@@ -174,8 +284,8 @@ Copyright &copy; 2016-2024. The Stdlib [Authors][stdlib-authors].
 [npm-image]: http://img.shields.io/npm/v/@stdlib/number-float64-base-assert-is-same-value.svg
 [npm-url]: https://npmjs.org/package/@stdlib/number-float64-base-assert-is-same-value
 
-[test-image]: https://github.com/stdlib-js/number-float64-base-assert-is-same-value/actions/workflows/test.yml/badge.svg?branch=v0.1.0
-[test-url]: https://github.com/stdlib-js/number-float64-base-assert-is-same-value/actions/workflows/test.yml?query=branch:v0.1.0
+[test-image]: https://github.com/stdlib-js/number-float64-base-assert-is-same-value/actions/workflows/test.yml/badge.svg?branch=main
+[test-url]: https://github.com/stdlib-js/number-float64-base-assert-is-same-value/actions/workflows/test.yml?query=branch:main
 
 [coverage-image]: https://img.shields.io/codecov/c/github/stdlib-js/number-float64-base-assert-is-same-value/main.svg
 [coverage-url]: https://codecov.io/github/stdlib-js/number-float64-base-assert-is-same-value?branch=main
