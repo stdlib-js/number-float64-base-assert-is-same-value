@@ -1,6 +1,6 @@
 {
   "name": "@stdlib/number-float64-base-assert-is-same-value",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "Test if two double-precision floating-point numbers are the same value.",
   "license": "Apache-2.0",
   "author": {
@@ -42,7 +42,7 @@
   "dependencies": {
     "@stdlib/napi-argv": "^0.2.2",
     "@stdlib/napi-argv-double": "^0.2.1",
-    "@stdlib/napi-export": "^0.2.2",
+    "@stdlib/napi-export": "^0.3.0",
     "@stdlib/utils-library-manifest": "^0.2.3"
   },
   "devDependencies": {
