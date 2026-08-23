@@ -1,33 +1,5 @@
+"use strict";var s=function(e,r){return function(){try{return r||e((r={exports:{}}).exports,r),r.exports}catch(i){throw (r=0, i)}};};var u=s(function(o,t){
+function n(e,r){return e===r?e===0?1/e===1/r:!0:e!==e&&r!==r}t.exports=n
+});var c=u();module.exports=c;
 /** @license Apache-2.0 */
-
-'use strict';
-
-/**
-* Test if two double-precision floating-point numbers are the same value.
-*
-* @module @stdlib/number-float64-base-assert-is-same-value
-*
-* @example
-* var isSameValue = require( '@stdlib/number-float64-base-assert-is-same-value' );
-*
-* var bool = isSameValue( 3.14, 3.14 );
-* // returns true
-*
-* bool = isSameValue( -0.0, -0.0 );
-* // returns true
-*
-* bool = isSameValue( -0.0, 0.0 );
-* // returns false
-*
-* bool = isSameValue( NaN, NaN );
-* // returns true
-*/
-
-// MODULES //
-
-var main = require( './main.js' );
-
-
-// EXPORTS //
-
-module.exports = main;
+//# sourceMappingURL=index.js.map
